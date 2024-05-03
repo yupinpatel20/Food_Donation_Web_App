@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.Navheader {
+  min-height: 100vh;  
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(./assets/fresh-greens-white-background.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 4%;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+nav img {
+  width: 65px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  display: block;
+  margin: auto;
+  background: lightgreen;
+  transition: 1s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.textBox {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.textBox h1 {
+  font-size: 62px;
+}
+
+.textBox p {
+  font-size: medium;
+  margin: 10px 0px 40px;
+}
+
+.ExploreBtn {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding: 12px 34px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ExploreBtn:hover {
+  border: 1px solid lightgreen;
+  background-color: lightgreen;
+  transition: 1s;
+  color: black;
+}
+
+.logInBtn {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logInBtn:hover {
+  border: 1px solid lightgreen;
+  background-color: lightgreen;
+  transition: 0.7s;
+  color: black;
+}
+
+nav .fa {
+  display: none;
+}
+
+.full-info {
+  background-color: #a9f3aa;
+}
+
+.info {
+  text-align: center;
+  padding: 50px 0px;
+  margin: 0% 5%;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 14px;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.info-p {
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: 600;
+}
+.info-row {
+  display: flex;
+  justify-content: space-between;
+}
+.info-col {
+  flex-basis: 32%;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    background-color: #a9f3aa;
+    border-radius: 10px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.info-col p {
+  color: rgb(35, 202, 35);
+}
+
+h3 {
+  text-align: center;
+    margin: 10px 0 !important;
+    font-weight: 600 !important;
+}
+
+.info-col:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+}
+.logo-link {
+  display: inline-block;
+  margin-right: 20px;
+} 
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 4%;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; 
+}

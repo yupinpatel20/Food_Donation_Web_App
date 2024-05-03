@@ -1,0 +1,27 @@
+.sidebar {
+    background-color: #e9ecef;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nav-link {
+    color: #343a40;
+    margin-bottom: 8px;
+}
+
+.nav-link:hover {
+    background-color: #e9ecef; /* Keep the background color the same on hover */
+}
+
+.nav-link:hover i,
+.nav-link:hover span {
+    color: #28a745; /* Change the text and icon color to green on hover */
+}
+
+.nav-link i {
+    margin-right: 10px;
+}
+
+.nav-link span {
+    font-size: 16px;
+}

@@ -1,0 +1,56 @@
+.custom-main-footer{
+  background-color: #a9f3aa;
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0px 30px 0px 30px !important;
+  margin-bottom: 0px;
+
+}
+
+
+h5 {
+  font-size: 1.25rem !important;
+  margin-bottom: 5px;
+}
+
+
+.nav-item:hover{
+  transition: 0.5s;
+  transform: scale(1.1);
+  color: green;
+}
+
+.SubscribeBtn {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding: 10px 30px;
+  border: 1px solid green;
+  background: transparent;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.SubscribeBtn:hover {
+  border: 1px solid lightgreen;
+  background-color: white; 
+  color: green;
+  transition: 0.5s;
+  transform: scale(1.1);
+  border-radius: 10px;
+}
+
+.col-4 p {
+  margin-bottom: 15px;
+}
+
+.SubscribeBtn:active {
+  background-color: transparent;
+  border: 1px solid darkgreen;
+  color: darkgreen;
+}
+
+p{
+  padding-left: 0px;
+}

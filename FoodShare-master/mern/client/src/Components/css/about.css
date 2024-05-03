@@ -1,0 +1,27 @@
+.AboutNavheader {
+  min-height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7));
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.MissionVisionContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+h2{
+  color: green;
+}
+
+.Mission, .Vision {
+  margin: 50px 20px;
+  padding: 50px;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff; /* Add a background color if needed */
+}

@@ -1,0 +1,18 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:server\" ",
+    "start:server": "cd client && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.1.0",
+    "concurrently": "^8.2.2",
+    "mdbreact": "^5.2.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

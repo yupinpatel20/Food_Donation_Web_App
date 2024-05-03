@@ -1,0 +1,54 @@
+/* Add this CSS to your existing stylesheet or create a new one */
+
+.custom-header {
+    background-color: #e9ecef; /* Darker green background color */
+    padding: 20px; /* Add padding for better visibility */
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    text-align: left;
+}
+
+.header-title {
+    color: #343a40; /* White text color */
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.header-description {
+    color: #343a40; /* White text color */
+    font-size: 18px;
+}
+
+.header-right {
+    text-align: right;
+}
+
+.header-link {
+    color: #343a40; /* White text color */
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+.header-link:hover {
+    color: #28a745; /* Gold color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.header-link {
+    padding: 8px; /* Adjust the padding value as needed */
+}
+
+.header-link i {
+    margin-right: 8px; /* Adjust the margin value as needed */
+}
+
