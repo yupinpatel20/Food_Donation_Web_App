@@ -266,58 +266,6 @@ const Analytics = () => {
                                 )}
                             </div>
                         </div>
-
-
-                        {/* Educational Content */}
-                        <div className="container text-center pt-3">
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <h2 className='title mb-4 text-secondary'>Educational Content</h2>
-                                </div>
-                            </div>
-
-                            <div className="row">
-                                <div className="col-md-4">
-                                    <div className="card bg-success text-white mb-4">
-                                        <div className="card-body">
-                                            <p className="content-text text-justify">
-                                                Food waste has significant economic and social costs, including lost income for farmers, increased food prices, and food insecurity for vulnerable populations.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-md-4">
-                                    <div className="card bg-danger text-white mb-4">
-                                        <div className="card-body">
-                                            <p className="content-text text-justify">
-                                                Redirecting surplus food to those in need reduces food waste and its associated environmental consequences, contributing to a more sustainable food system.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-md-4">
-                                    <div className="card bg-warning text-white mb-4">
-                                        <div className="card-body">
-                                            <p className="content-text text-justify">
-                                                Consider growing your own fruits, vegetables, and herbs to reduce reliance on long-distance food transportation and support sustainable food production.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <main>
-                            {/* Chart Section */}
-                            <div className="row mt-5">
-                                <div className="col-md-12">
-                                    <h2 className='title mb-3 text-center text-secondary '>{userInfo.userName}'s Analytics</h2>
-                                    <Chart foodTypeData={foodInfo.foodTypeCounts} counts={counts} labelText={labelText} />
-                                </div>
-                            </div>
-                        </main>
                     </div>
                 </div>
             </div>

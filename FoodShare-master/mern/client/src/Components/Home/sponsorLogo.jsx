@@ -26,18 +26,7 @@ export default function sponsorLogo({ id }) {
                                 <img src={partner4} alt="client4" />
                             </li>
                             <br />
-                            <li>
-                                <img src={partner6} alt="client6" />
-                                <img src={partner6} alt="client6" />
-                            </li>
-                            <li>
-                                <img src={partner5} alt="client5" />
-                                <img src={partner5} alt="client5" />
-                            </li>
-                            <li>
-                                <img src={partner7} alt="client7" />
-                                <img src={partner7} alt="client7" />
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { getDatabase, ref, push, set, onValue } from 'firebase/database';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import DonationHeader from "./DonationHeader"
-import Footer from '../../Footer/footer'
+import DonationHeader from "./DonationHeader";
+import Footer from '../../Footer/footer';
 import '../../css/RequestForm.css';
-import "../../css/donationHeader.css"
+import "../../css/donationHeader.css";
+import firebaseApp from '../../../config/firebase-config';
 
 const RequestListing = ({ dashboardView, handleLocationClick }) => {
     const [showForm, setShowForm] = useState(false);
@@ -60,6 +61,14 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
                         setUserRole(userData.account_type);
                         setUserName(capitalizeFirstLetter(userData.first_name));
                     }
+
+                    // Store user data in Firebase if it doesn't exist
+                    const userDataRef = ref(db, `users/${user.uid}`);
+                    set(userDataRef, {
+                        uid: user.uid,
+                        email: user.email,
+                        // Add other user data you want to store
+                    });
                 });
             } else {
                 setUserId(null);
@@ -86,7 +95,6 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
             default:
                 return "Unknown Status";
         }
-
     };
 
     const handleAccept = (requestId) => {
@@ -142,7 +150,6 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
         }
     };
 
-
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -192,7 +199,6 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
         'title',
         'description',
         'expirationDate',
-        'foodType',
         'foodQuantity',
         'foodWeight',
         'pickupDateTime',
@@ -201,7 +207,6 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
     const displayedColumns = dashboardView ? columnsForDashboard : columnsForDonationsPage;
 
     return (
-
         <div className="container-fluid pb-3">
             <div className="row">
                 {!dashboardView && <DonationHeader />}
@@ -223,7 +228,6 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
                         <div className="form-popup">
                             <div className="form-container">
                                 <form className="row g-3" onSubmit={handleFormSubmit}>
-
                                     <div className="col-md-6">
                                         <label htmlFor="inputTitle" className="form-label">Title</label>
                                         <input
@@ -235,7 +239,6 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
                                             required
                                             className='form-control'
                                         />
-
                                         <label htmlFor="inputExpirationDate" className="form-label mb-1 mt-2">Expiration Date</label>
                                         <input
                                             type="date"
@@ -245,7 +248,6 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
                                             className='form-control'
                                         />
                                     </div>
-
                                     <div className="col-md-6">
                                         <label htmlFor="inputDescription" className="form-label">Description</label>
                                         <textarea
@@ -258,7 +260,6 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
                                             className='form-control'
                                         ></textarea>
                                     </div>
-
                                     <div className="col-md-6">
                                         <label htmlFor="inputQuantity" className="form-label ">Quantity</label>
                                         <input
@@ -283,7 +284,6 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
                                             required
                                         />
                                     </div>
-
                                     <div className="col-md-6">
                                         <label htmlFor="inputTime" className="form-label">Pickup Date & Time</label>
                                         <input
@@ -295,7 +295,6 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
                                             required
                                         />
                                     </div>
-
                                     {/* Button */}
                                     <div className="col-6">
                                         <button type="submit" className="btn btn-primary">Submit</button>
@@ -337,7 +336,6 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
                                                         className={`btn ${data.status === "pending" ? "btn-warning" : "btn-primary"}`}
                                                         onClick={() => handleAccept(data.requestId)}
                                                         disabled={data.status === "pending"}
-
                                                     >
                                                         {getStatusButtonText(data.status)}
                                                     </button>
@@ -357,7 +355,6 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
                                                                     : ""
                                                             }`}
                                                         onClick={() => handlePending(data.requestId, data.status)}
-
                                                     >
                                                         {getStatusButtonText(data.status)}
                                                     </button>
@@ -370,7 +367,6 @@ const RequestListing = ({ dashboardView, handleLocationClick }) => {
                         </table>
                     </div>
                 </div >
-
                 {!dashboardView && <Footer />}
             </div>
         </div>

@@ -11,8 +11,13 @@
   height: 100vh;
   width: 100vw !important;
   place-items: center;
-  background: -webkit-linear-gradient(left, rgb(102, 235, 102), green);
   /* background: -webkit-linear-gradient(left, rgb(102, 235, 102), green); */
+  /* background: -webkit-linear-gradient(left, rgb(102, 235, 102), green); */
+
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+      url(../../assets/login_bg.jpg);
+      background-position: center;
+    background-size: cover;
 }
 ::selection {
   background: green;
@@ -142,7 +147,7 @@ form .field input:focus::placeholder {
 }
 .form-inner form .pass-link a,
 .form-inner form .signup-link a {
-  color: green;
+  color: rgb(0, 115, 128);
   text-decoration: none;
 }
 .form-inner form .pass-link a:hover,
@@ -163,7 +168,7 @@ form .btn .btn-layer {
   left: -100%;
   background: -webkit-linear-gradient(
     right,
-    rgb(102, 235, 102),
+    rgb(118, 235, 102),
     green,
     rgb(102, 235, 102),
     green
